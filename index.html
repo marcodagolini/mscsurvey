@@ -38,18 +38,27 @@
  	
  <script>
 	
+	 
+	 
+	 function offeredOrNot(data){
+		 
+		 console.log(JSON.stringify(data));
+		
+		 
+	 }
  
 	 
 	 $(document).ready(function() {
+		 lpTag.events.bind({
+			 eventName : "OFFER_IMPRESSION",
+			 appName : "LP_OFFERS",
+			 func: offeredOrNot,
+			 triggerOnce : false
+		 });
+	 });
 
-lpTag.events.bind({
-    eventName : "OFFER_IMPRESSION",
-    appName : "LP_OFFERS",
-    func: offeredOrNot,
-    triggerOnce : false
- });
+
  
- });
 
 	 
  
