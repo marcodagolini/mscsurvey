@@ -46,6 +46,13 @@
 		
 		 
 	 }
+	 
+	 function clickOrNot(data){
+		 
+		 console.log(JSON.stringify(data));
+		
+		 
+	 }
  
 	 
 	 $(document).ready(function() {
@@ -55,6 +62,13 @@
 			 func: offeredOrNot,
 			 triggerOnce : false
 		 });
+		 lpTag.events.bind({
+			eventName : "OFFER_CLICK",
+			appName : "LP_OFFERS",
+			func: clickOrNot,
+			triggerOnce : false
+		});
+
 	 });
 
 
